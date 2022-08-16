@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Avenir;
+  font-weight: 400;
+  src: url(../../Assets/Font/AvenirNextLTPro-Regular.otf);
+}
+.Header {
+  font-family: Avenir;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem;
+}
+.Header__logo {
+  align-self: center;
+}
+.Header__search-div {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  align-self: center;
+}
+.Header__profile-pic {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+.Header__searchbox {
+  width: 70vw;
+}
+.Header__button {
+  background-color: #0095FF;
+  color: white;
+  width: 80vw;
+  align-self: center;
+  font-family: Avenir;
+}/*# sourceMappingURL=Header.css.map */

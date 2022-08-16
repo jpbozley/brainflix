@@ -1,0 +1,35 @@
+@import "../../styles/partials/__colors";
+@import "../../styles/partials/__fonts";
+
+
+.Header{
+    font-family: Avenir;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem;
+    &__logo{
+        align-self: center;
+    }
+    &__search-div{
+        display:flex;
+        margin-top: 1rem;
+        margin-bottom:1rem;
+        align-self: center;
+    }
+
+    &__profile-pic{
+        width: 2rem;
+        height: 2rem;
+        border-radius:50%;
+    }
+    &__searchbox{
+        width: 70vw;
+    }
+    &__button{
+        background-color: $button;
+        color: white;
+        width: 80vw;
+        align-self:center;
+        font-family: Avenir;
+    }
+}
