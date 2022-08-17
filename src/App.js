@@ -1,4 +1,5 @@
 import './App.css';
+import './styles/partials/__global.scss'
 import Header from './Components/Header/Header'
 import Comments from './Components/Comments/Comments'
 import Upcoming from './Components/Upcoming/Upcoming'

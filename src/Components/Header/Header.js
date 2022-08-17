@@ -1,3 +1,4 @@
+import '../../styles/partials/__global.scss'
 import './Header.scss';
 import logo from '../../Assets/Logo/BrainFlix-logo.svg'
 import upload from "../../Assets/Icons/upload.svg"
