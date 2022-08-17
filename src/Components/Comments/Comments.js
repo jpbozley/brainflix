@@ -19,7 +19,7 @@ function Comments() {
     </div>
     <div className="Comments__text-container">
         <h2 className="Comments__title">Join the conversation</h2>
-        <input type="textarea" className="Comments__text-area" placeholder="Add a new comment"/>
+        <textarea className="Comments__text-area" rows="8" placeholder="Add a new comment"/>
         <button className="Comments__button"><img className="Comments__button-icon" src={commentIcon} alt="comment icon" />COMMENT</button>
     </div>
 </div>
