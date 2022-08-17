@@ -1,0 +1,53 @@
+@import "../../styles/partials/__colors";
+@import "../../styles/partials/__fonts";
+
+.Comments{
+    display: flex;
+    &__count{
+        color:$primary1;
+        margin: 0;
+        font-size: 1rem;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+        text-align: left;}
+    &__title{
+        color: $primary3;
+        margin: 0;
+        font-family: Avenir;
+        font-size: 1rem;
+        align-self: flex-start;
+    }
+    &__container{
+        display: flex;
+    }
+    &__text-container{
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        align-items: flex-start;
+        margin-left:1rem;
+        margin-right: 1rem;
+    }
+    &__profile-pic-container{
+        margin-left: 1rem;
+    }
+    &__profile-pic{
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius:50%;
+        margin-top:2rem;}
+    &__text-area{
+        width: 70vw;
+        background-color: $secondary4;
+        height: 20vh;
+    }
+    &__button{
+        width: 72.5vw;
+        background-color: $primary2;
+        color: $primary4;
+        font-family: Avenir;
+    }
+    &__button:hover{
+        background-color: $secondary2;
+    }
+    }

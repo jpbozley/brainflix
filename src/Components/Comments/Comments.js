@@ -9,16 +9,19 @@ function Comments() {
 
 {/* # of Comments */}
 
-<h1>3 Comments</h1>
+<h1 className="Comments__count">3 Comments</h1>
 
 {/* Profile pic, join the conversation, textbox */}
-<div className="Comments__text-container">
-    <img src={profilePic} alt="profile pic" className="Comments__profile-pic"/>
-    <h2 className="Comments__title">Join the conversation</h2>
-    <button className="Comments__button"><img src={commentIcon} alt="upload icon" />UPLOAD</button>
-    <input type="textarea" />
+<div className="Comments__container">
+    <div className="Comments__profile-pic-container">
+        <img src={profilePic} alt="profile pic" className="Comments__profile-pic"/>
+    </div>
+    <div className="Comments__text-container">
+        <h2 className="Comments__title">Join the conversation</h2>
+        <input type="textarea" className="Comments__text-area" placeholder="Add a new comment"/>
+        <button className="Comments__button"><img src={commentIcon} alt="comment icon" />COMMENT</button>
+    </div>
 </div>
-{/* comment button */}
 
 {/* displayed comments */}
     </div>

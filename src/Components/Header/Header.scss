@@ -6,7 +6,7 @@
     font-family: Avenir;
     display: flex;
     flex-direction: column;
-    padding: 2rem 2rem;
+    padding: 1rem 1rem;
     &__logo{
         align-self: center;
     }
@@ -26,10 +26,13 @@
         width: 70vw;
     }
     &__button{
-        background-color: $button;
-        color: white;
+        background-color: $primary2;
+        color: $primary4;
         width: 80vw;
         align-self:center;
         font-family: Avenir;
+    }
+    &__button:hover{
+        background-color: $secondary2;
     }
 }

@@ -7,7 +7,7 @@
   font-family: Avenir;
   display: flex;
   flex-direction: column;
-  padding: 2rem 2rem;
+  padding: 1rem 1rem;
 }
 .Header__logo {
   align-self: center;
@@ -28,8 +28,11 @@
 }
 .Header__button {
   background-color: #0095FF;
-  color: white;
+  color: #FFFFFF;
   width: 80vw;
   align-self: center;
   font-family: Avenir;
+}
+.Header__button:hover {
+  background-color: #0065AD;
 }/*# sourceMappingURL=Header.css.map */
