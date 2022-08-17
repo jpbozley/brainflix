@@ -1,8 +1,4 @@
-import './App.css';
-import Header from './Components/Header/Header'
-import Comments from './Components/Comments/Comments'
-import Upcoming from './Components/Upcoming/Upcoming'
-
+import './Upcoming.scss';
 
 const videosArray=[{"title":"BMX Rampage: 2021 Highlights","channel":"Red Cow","image":"https://i.imgur.com/l2Xfgpl.jpg","description":"On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen. While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time -- eight years after his first Red Cow Rampage title","views":"1,001,023","likes":"110,985","duration":"4:01","video":"https://project-2-api.herokuapp.com/stream","timestamp":1626032763000,"comments":[{"name":"Micheal Lyons","comment":"They BLEW the ROOF off at their last event, once everyone started figuring out they were going. This is still simply the greatest opening of an event I have EVER witnessed.","likes":0,"timestamp":1628522461000},{"name":"Gary Wong","comment":"Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!","likes":0,"timestamp":1626359541000},{"name":"Theodore Duncan","comment":"How can someone be so good!!! You can tell he lives for this and loves to do it every day. Every time I see him I feel instantly happy! He’s definitely my favorite ever!","likes":0,"timestamp":1626011132000}],"id":"84e96018-4022-434e-80bf-000ce4cd12b8"},
 {"title":"Become A Travel Pro In One Easy Lesson","channel":"Todd Welch","image":"https://i.imgur.com/5qyCZrD.jpg","description":"Luxury is something everyone deserves from time to time. Such an indulgence can make a vacation a truly rejuvenating experience. This video will focus a lot on helping the first time or inexperienced traveler head out prepared and confident in themselves.","views":"2,043,765","likes":"400,058","duration":"7:26","video":"https://project-2-api.herokuapp.com/stream","timestamp":1625158995000,"comments":[{"name":"Mattie Casarez","comment":"This is exactly the kind of advice I’ve been looking for! One minute you’re packing your bags, the next you’re dancing around in the streets without a care in the world.","likes":0,"timestamp":1625250720000},{"name":"Taylor Jade","comment":"Excellent tips! Another idea is to keep all of your important belongings like your passport inside a waterproof bag. Perfect for those last minute trips to the beach, trust me.","likes":0,"timestamp":1625238122000},{"name":"Adnan Natt","comment":"Who ever knew travel could be so easy? Looking forward to getting to put this into practice when I fly away in the near future. Wish me good luck!","likes":0,"timestamp":1625177192000}],"id":"c05b9a93-8682-4ab6-aff2-92ebb4bbfc14"},
@@ -15,14 +11,24 @@ const videosArray=[{"title":"BMX Rampage: 2021 Highlights","channel":"Red Cow","
 {"title":"Train Travel On Track For Safety","channel":"Scotty Cranmer","image":"https://i.imgur.com/i6S8m7I.jpg","description":"Traveling by train can be convenient, enjoyable and economical. You can minimize your risk of injury, illness, and theft by taking a few simple precautions. Before you travel, you should pack only the necessities. This will make your luggage easy to carry and store during your travels. You should always assume that the tap water on the train is not potable. Whenever it is possible, stock up on bottles of water to reduce the risk of dehydration. Remember, never accept food or drinks from strangers!","views":"3,092,284","likes":"75,985","duration":"4:20","video":"https://project-2-api.herokuapp.com/stream","timestamp":1632344461000,"comments":[{"name":"Martin Evergreen","comment":"I’ve loved trains ever since I was a child. I dreamed about riding one around the world. This is the most fantastic thing I’ve seen yet, and I’m watching it ON a train!","likes":3,"timestamp":1632512763000},{"name":"Emily Harper","comment":"Let’s collaborate on a video for saving money on cheap train tickets! I’ll have my associates contact yours.","likes":0,"timestamp":1632496261000}],"id":"76ca28c0-7dea-4553-887f-8e5129a80fc3"}]
 
 
-function App() {
+
+function Upcoming() {
   return (
-    <div className="App">
-      <Header />
-      <Comments />
-      <Upcoming />
+    <div className="Upcoming">
+        <h2 className="Upcoming__title">NEXT VIDEOS</h2>
+        {videosArray.map((video)=>{
+            return<div className="Upcoming__list-item">
+            <div className="Upcoming__list-image-container">
+            <img className="Upcoming__list-image" src={video.image} />
+            </div>
+            <div className="Upcoming__list-item-info">
+                <h3>{video.title}</h3>
+                <h3>{video.channel}</h3>
+            </div>
+            </div>
+        })}
     </div>
   );
 }
 
-export default App;
+export default Upcoming;
