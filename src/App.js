@@ -1,6 +1,5 @@
 import './App.css';
 import './styles/partials/__global.scss'
-import videosArray from './Assets/Data/video-details.json'
 import Header from './Components/Header/Header'
 import Video from './Components/Video/Video'
 import Comments from './Components/Comments/Comments'

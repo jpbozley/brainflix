@@ -9,7 +9,7 @@ function Upcoming() {
         {videosArray.map((video)=>{
             return <div className="Upcoming__list-item">
             <div className="Upcoming__list-image-container">
-                <img className="Upcoming__list-image" src={video.image} />
+                <img className="Upcoming__list-image" src={video.image} alt="video thumbnail"/>
             </div>
             <div className="Upcoming__list-item-info">
                 <h3 className="Upcoming__list-item-title">{video.title}</h3>

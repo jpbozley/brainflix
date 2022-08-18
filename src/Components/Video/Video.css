@@ -1,0 +1,27 @@
+@font-face {
+  font-family: Avenir;
+  font-weight: 400;
+  src: url(../../Assets/Font/AvenirNextLTPro-Regular.otf);
+}
+@font-face {
+  font-family: Avenir;
+  font-weight: 700;
+  src: url(../../Assets/Font/AvenirNextLTPro-Bold.otf);
+}
+.videos__video {
+  width: 100vw;
+  height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+.videos__info {
+  display: flex;
+  padding-left: 1rem;
+}
+.videos__title {
+  font-family: Avenir;
+  font-weight: 700;
+  text-align: left;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=Video.css.map */

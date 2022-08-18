@@ -1,11 +1,17 @@
 import './Comments.scss';
 import commentIcon from "../../Assets/Icons/add_comment.svg"
 import profilePic from "../../Assets/Images/Mohan-muruge.jpg"
-
+import videosArray from '../../Assets/Data/video-details.json'
 
 function Comments() {
+
+  let mappedComments=videosArray.map((video)=>{
+    return video.comments
+  })
+  console.log(mappedComments[0])
+
   return (
-    <div className="comments">
+<div className="comments">
 
 
 {/* # of Comments */}
@@ -25,7 +31,19 @@ function Comments() {
 </div>
 
 {/* displayed comments */}
-    </div>
+<div className="Comments__display">
+  </div>
+    {mappedComments[0].map((array)=>{
+      let convertedDate=new Date(array.timestamp);
+      return (
+      <>
+        <div className="Comments__profile-circle"></div>
+        <h3>{array.name}</h3>
+        <h3>{convertedDate.toLocaleDateString()}</h3>
+        <h3>{array.comment}</h3>
+        </>)
+    })}
+  </div>
   );
 }
 
