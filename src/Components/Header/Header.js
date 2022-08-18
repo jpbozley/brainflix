@@ -3,6 +3,7 @@ import './Header.scss';
 import logo from '../../Assets/Logo/BrainFlix-logo.svg'
 import upload from "../../Assets/Icons/upload.svg"
 import profilePic from "../../Assets/Images/Mohan-muruge.jpg"
+
 function Header() {
   return (
     <div className="Header">

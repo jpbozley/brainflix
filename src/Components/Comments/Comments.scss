@@ -41,6 +41,7 @@
         background-color: $secondary4;
         border: 1px solid $secondary3;
         border-radius: 4px;
+        margin-bottom:.5rem;
     }
     &__button{
         width: 72.5vw;
@@ -53,6 +54,7 @@
         position: relative;
         padding-top: .5rem;
         padding-bottom: .5rem;
+        margin-bottom: .5rem;
     }
     &__button:hover{
         background-color: $secondary2;
@@ -61,7 +63,31 @@
         position: absolute;
         left: 1rem;
         bottom:.25rem;    }
-    &__display{
-        
+    &__profile-circle-container{
+        padding-top: 1rem;
+    }
+    &__profile-circle{
+        width: 2rem;
+        height:2rem;
+        align-self: center;
+        background-color: grey;
+        border-radius:50%;
+    }
+    &__container{
+        border-bottom: 1px solid $secondary3;
+        display: flex;
+    }
+    &__info-container{
+        display: flex;
+        flex-direction: column;
+        padding: .5rem;
+    }
+    &__comment-header{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content-container{
+        display:flex;
+        text-align: left;
     }
     }

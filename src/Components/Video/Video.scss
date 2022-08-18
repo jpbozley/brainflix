@@ -3,6 +3,7 @@
 
 
 .videos{
+
     &__video{
         width: 100vw;
         height: 30vh;
@@ -11,11 +12,38 @@
     &__info{
         display: flex;
         padding-left: 1rem;
+        flex-direction: column;
+        font-family: avenir;
     }
     &__title{
         font-family: Avenir;
         font-weight: 700;
         text-align: left;
         font-size: 1.5rem;
+    }
+    &__stats-container{
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid $secondary3;
+        border-bottom: 1px solid $secondary3;
+    }
+    &__author{
+        font-weight: 700;
+    }
+    &__date{
+        color: $primary3;
+    }
+    &__likes{
+        color: $primary3;
+    }
+    &__views{
+        color:$primary3;
+    }
+    &__description{
+        text-align: left;
+        font-family: avenir;
+        font-size: .75rem;
+        line-height: 1.1rem;
+        font-weight: 400;
     }
 }

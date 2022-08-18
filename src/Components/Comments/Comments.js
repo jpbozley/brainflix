@@ -1,17 +1,14 @@
 import './Comments.scss';
 import commentIcon from "../../Assets/Icons/add_comment.svg"
 import profilePic from "../../Assets/Images/Mohan-muruge.jpg"
-import videosArray from '../../Assets/Data/video-details.json'
 
-function Comments() {
+function Comments({videosArray}) {
 
   let mappedComments=videosArray.map((video)=>{
     return video.comments
   })
-  console.log(mappedComments[0])
-
   return (
-<div className="comments">
+<section className="comments">
 
 
 {/* # of Comments */}
@@ -25,7 +22,7 @@ function Comments() {
     </div>
     <div className="Comments__text-container">
         <h2 className="Comments__title">Join the conversation</h2>
-        <textarea className="Comments__text-area" rows="8" placeholder="Add a new comment"/>
+        <textarea className="Comments__text-area" rows="6" placeholder="Add a new comment"/>
         <button className="Comments__button"><img className="Comments__button-icon" src={commentIcon} alt="comment icon" />COMMENT</button>
     </div>
 </div>
@@ -36,14 +33,22 @@ function Comments() {
     {mappedComments[0].map((array)=>{
       let convertedDate=new Date(array.timestamp);
       return (
-      <>
+    <div className="Comments__container">
+      <div className="Comments__profile-circle-container">
         <div className="Comments__profile-circle"></div>
-        <h3>{array.name}</h3>
-        <h3>{convertedDate.toLocaleDateString()}</h3>
-        <h3>{array.comment}</h3>
-        </>)
+      </div>
+      <div className="Comments__info-container">
+        <div className="Comments__comment-header">
+          <p>{array.name}</p>
+          <p>{convertedDate.toLocaleDateString()}</p>
+        </div>
+        <div className="Comments__content-container">
+          <p>{array.comment}</p>
+        </div>
+      </div>
+    </div>)
     })}
-  </div>
+  </section>
   );
 }
 

@@ -1,12 +1,14 @@
 import '../../styles/partials/__global.scss'
 import './Upcoming.scss';
-import videosArray from '../../Assets/Data/video-details.json'
 
-function Upcoming() {
+
+function Upcoming({videosArray}) {
+
+
   return (
     <div className="Upcoming">
         <h2 className="Upcoming__title">NEXT VIDEOS</h2>
-        {videosArray.map((video)=>{
+        {videosArray?.map((video)=>{
             return <div className="Upcoming__list-item">
             <div className="Upcoming__list-image-container">
                 <img className="Upcoming__list-image" src={video.image} alt="video thumbnail"/>
