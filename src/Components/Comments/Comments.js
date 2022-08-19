@@ -21,8 +21,10 @@ function Comments({videosArray}) {
         <img src={profilePic} alt="profile pic" className="Comments__profile-pic"/>
     </div>
     <div className="Comments__text-container">
+        <div>
         <h2 className="Comments__title">Join the conversation</h2>
         <textarea className="Comments__text-area" rows="6" placeholder="Add a new comment"/>
+        </div>
         <button className="Comments__button"><img className="Comments__button-icon" src={commentIcon} alt="comment icon" />COMMENT</button>
     </div>
 </div>
@@ -39,8 +41,8 @@ function Comments({videosArray}) {
       </div>
       <div className="Comments__info-container">
         <div className="Comments__comment-header">
-          <p>{array.name}</p>
-          <p>{convertedDate.toLocaleDateString()}</p>
+          <p className="Comments__comment-name">{array.name}</p>
+          <p className="Comments__comment-date">{convertedDate.toLocaleDateString()}</p>
         </div>
         <div className="Comments__content-container">
           <p>{array.comment}</p>

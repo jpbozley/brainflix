@@ -1,5 +1,6 @@
 @import "../../styles/partials/__colors";
 @import "../../styles/partials/__fonts";
+@import "../../styles/partials/_mixins";
 
 .Upcoming{
     &__title{
@@ -16,12 +17,19 @@
         display: flex;
         padding-left: 1rem;
         margin-top:1rem;
+        @include tablet{
+            width: 35vw;
+        }
           }
     &__list-image{
         width: 30vw;
         height: 15vw;
         object-fit: cover;
         border-radius: 4px;
+        @include tablet{
+            width: 15vw;
+            height: 7.5vw;
+        }
         }
     &__list-item-info{
         width: 60vw;

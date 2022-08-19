@@ -21,7 +21,7 @@ let convertedDate=new Date(videosArray[0].timestamp);
               {convertedDate.toLocaleDateString()}
             </p>
           </div>
-          <div className="videos__views-likes">
+          <div className="videos__views-likes-container">
             <p className="videos__views">
               <img src={views} alt="views" />{videosArray[0].views}
             </p>

@@ -1,5 +1,7 @@
 @import "../../styles/partials/__colors";
 @import "../../styles/partials/__fonts";
+@import "../../styles/partials/_mixins";
+
 
 .Comments{
     display: flex;
@@ -15,10 +17,12 @@
         margin: 0;
         font-family: Avenir;
         font-size: 1rem;
-        align-self: flex-start;
+        text-align: left;
     }
     &__container{
         display: flex;
+        padding-right: 1rem;
+        padding-left: 1rem;
     }
     &__text-container{
         display: flex;
@@ -27,9 +31,9 @@
         align-items: flex-start;
         margin-left:1rem;
         margin-right: 1rem;
-    }
-    &__profile-pic-container{
-        margin-left: 1rem;
+        @include tablet{
+         flex-direction: row;   
+        }
     }
     &__profile-pic{
         width: 2.5rem;
@@ -55,6 +59,10 @@
         padding-top: .5rem;
         padding-bottom: .5rem;
         margin-bottom: .5rem;
+        @include tablet{
+            align-self: center;
+            margin-left: 1rem;
+        }
     }
     &__button:hover{
         background-color: $secondary2;
@@ -65,12 +73,14 @@
         bottom:.25rem;    }
     &__profile-circle-container{
         padding-top: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     &__profile-circle{
         width: 2rem;
         height:2rem;
         align-self: center;
-        background-color: grey;
+        background-color: $secondary3;
         border-radius:50%;
     }
     &__container{
@@ -81,6 +91,7 @@
         display: flex;
         flex-direction: column;
         padding: .5rem;
+        font-family: Avenir;
     }
     &__comment-header{
         display: flex;
@@ -89,5 +100,11 @@
     &__content-container{
         display:flex;
         text-align: left;
+    }
+    &__comment-name{
+        font-weight: 700;
+    }
+    &__comment-date{
+        color: $primary3;
     }
     }

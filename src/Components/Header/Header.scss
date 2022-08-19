@@ -1,5 +1,6 @@
 @import "../../styles/partials/__colors";
 @import "../../styles/partials/__fonts";
+@import "../../styles/partials/_mixins";
 
 
 .Header{
@@ -7,23 +8,47 @@
     display: flex;
     flex-direction: column;
     padding: 1rem 1rem;
+    @include tablet{
+        flex-direction: row;
+    }
     &__logo{
         align-self: center;
+
     }
     &__search-div{
         display:flex;
         margin-top: 1rem;
         margin-bottom:1rem;
         align-self: center;
+        @include tablet{
+            padding-left: 4rem;
+            padding-right: 1rem;
+        }
     }
 
     &__profile-pic{
         width: 2rem;
         height: 2rem;
         border-radius:50%;
+        @include tablet{
+            display: none;
+        }
+    }
+    &__profile-pic-tablet{
+        width: 2rem;
+        height: 2rem;
+        border-radius:50%;
+        display: none;
+        @include tablet{
+            display: inline;
+            align-self: center;
+        }
     }
     &__searchbox{
         width: 70vw;
+        @include tablet{
+            width: 40vw;
+        }
     }
     &__button{
         background-color: $primary2;
@@ -39,6 +64,10 @@
         position: relative;
         padding-top: .5rem;
         padding-bottom: .5rem;
+        @include tablet{
+            width: 20vw;
+            margin-right: 1rem;
+        }
     }
     &__button:hover{
         background-color: $secondary2;

@@ -1,6 +1,6 @@
 @import "../../styles/partials/__colors";
 @import "../../styles/partials/__fonts";
-
+@import "../../styles/partials/_mixins";
 
 .videos{
 
@@ -12,8 +12,10 @@
     &__info{
         display: flex;
         padding-left: 1rem;
+        padding-right: 1rem;
         flex-direction: column;
         font-family: avenir;
+
     }
     &__title{
         font-family: Avenir;
@@ -26,6 +28,42 @@
         justify-content: space-around;
         border-top: 1px solid $secondary3;
         border-bottom: 1px solid $secondary3;
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-between;
+            border-top: none;
+        }
+    }
+    &__author-date-container{
+        display: flex;
+        flex-direction: column;
+        @include tablet{
+            flex-direction: row;
+        }
+    }
+    &__author{
+        @include tablet{
+            margin-right: 1rem;
+        }
+    }
+    &__date{
+        @include tablet{
+            margin-left: 1rem;
+        }
+    }
+    &__views-likes-container{
+        display: flex;
+        flex-direction:column;
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+    &__views{
+        margin-right: 1rem;
+    }
+    &__likes{
+        margin-left: 1rem;
     }
     &__author{
         font-weight: 700;
