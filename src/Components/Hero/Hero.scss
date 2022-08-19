@@ -1,0 +1,30 @@
+// .hero{
+
+// &__video{
+//     width: 100vw;
+//     height: 30vh;
+//     object-fit: cover;
+//     border-radius: 4px;}
+// }
+
+@import "../../styles/partials/__colors";
+@import "../../styles/partials/_mixins";
+.hero {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0;
+    background-color: $primary1;
+  
+    &__video {
+      width: 100%;
+  
+      @include tablet {
+        max-height: 330px
+      }
+  
+      @include desktop {
+        max-height: 600px
+      }
+  
+    }
+  }

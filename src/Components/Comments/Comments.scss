@@ -2,9 +2,12 @@
 @import "../../styles/partials/__fonts";
 @import "../../styles/partials/_mixins";
 
-
 .Comments{
     display: flex;
+    @include desktop{
+        margin-left: auto;
+        width:50vw;
+    }
     &__count{
         color:$primary1;
         margin: 0;
@@ -46,6 +49,9 @@
         border: 1px solid $secondary3;
         border-radius: 4px;
         margin-bottom:.5rem;
+        @include desktop{
+            width: 30vw;
+        }
     }
     &__button{
         width: 72.5vw;
@@ -62,6 +68,9 @@
         @include tablet{
             align-self: center;
             margin-left: 1rem;
+        }
+        @include tablet{
+            width: 10vw;
         }
     }
     &__button:hover{
@@ -96,6 +105,7 @@
     &__comment-header{
         display: flex;
         justify-content: space-between;
+        text-align: left;
     }
     &__content-container{
         display:flex;

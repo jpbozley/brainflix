@@ -1,4 +1,5 @@
 import './Video.scss';
+import '../../styles/partials/__global.scss'
 import likes from '../../Assets/Icons/likes.svg'
 import views from '../../Assets/Icons/views.svg'
 
@@ -7,9 +8,6 @@ let convertedDate=new Date(videosArray[0].timestamp);
 
   return (
     <section className="videos">
-      <div className="videos__display">
-        <video className="videos__video" controls src={videosArray[0].video} poster={videosArray[0].image}></video>
-      </div>
       <div className="videos__info">
         <h1 className="videos__title">{videosArray[0].title}</h1>
         <div className="videos__stats-container">

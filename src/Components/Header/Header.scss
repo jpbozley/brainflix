@@ -11,6 +11,9 @@
     @include tablet{
         flex-direction: row;
     }
+    @include desktop{
+        justify-content: space-between;
+    }
     &__logo{
         align-self: center;
 

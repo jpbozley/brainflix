@@ -1,4 +1,5 @@
 import './Comments.scss';
+import '../../styles/partials/__global.scss'
 import commentIcon from "../../Assets/Icons/add_comment.svg"
 import profilePic from "../../Assets/Images/Mohan-muruge.jpg"
 

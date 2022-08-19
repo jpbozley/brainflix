@@ -3,18 +3,16 @@
 @import "../../styles/partials/_mixins";
 
 .videos{
-
-    &__video{
-        width: 100vw;
-        height: 30vh;
-        object-fit: cover;
-        border-radius: 4px;}
     &__info{
         display: flex;
         padding-left: 1rem;
         padding-right: 1rem;
         flex-direction: column;
         font-family: avenir;
+        @include desktop{
+            margin-left: auto;
+            width: 50vw;
+        }
 
     }
     &__title{
