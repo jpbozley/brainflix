@@ -26,11 +26,13 @@
         display: flex;
         padding-right: 1rem;
         padding-left: 1rem;
+        @include tablet{
+            width: 100%;
+        }
     }
     &__text-container{
         display: flex;
         flex-direction: column;
-        width: 80vw;
         align-items: flex-start;
         margin-left:1rem;
         margin-right: 1rem;
@@ -54,7 +56,7 @@
         }
     }
     &__button{
-        width: 72.5vw;
+        width: 10rem;
         background-color: $primary2;
         color: $primary4;
         font-family: Avenir;
@@ -65,13 +67,12 @@
         padding-top: .5rem;
         padding-bottom: .5rem;
         margin-bottom: .5rem;
+        background-image: url('../../Assets/Icons/add_comment.svg');
+        background-repeat: no-repeat;
+        background-position: bottom 8px left 10px;
         @include tablet{
             align-self: center;
-            margin-left: 1rem;
-        }
-        @include tablet{
-            width: 10vw;
-        }
+            margin-left: 1rem;}
     }
     &__button:hover{
         background-color: $secondary2;

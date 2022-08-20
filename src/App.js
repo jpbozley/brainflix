@@ -12,17 +12,23 @@ import {useState} from 'react'
 
 function App() {
   const [videosArray, setVideosArray]=useState(videosArrayData);
-  return (
+  const [currentVideo, setCurrentVideo]=useState(videosArrayData[0]);
+
+return (
     <div className="App">
       <Header />
-      <Hero videosArray={videosArray}/>
+      <Hero videosArray={videosArray}
+      currentVideo={currentVideo}/>
       <div className="App__info-container">
       <div className="App__videos-comments">
-      <Video videosArray={videosArray}/>
+      <Video videosArray={videosArray}
+      currentVideo={currentVideo}/>
       <Comments videosArray={videosArray}/>
       </div>
       <div className="App__upcoming">
-      <Upcoming videosArray={videosArray}/>
+      <Upcoming videosArray={videosArray}
+      currentVideo={currentVideo}
+      setCurrentVideo={setCurrentVideo}/>
       </div>
       </div>
     </div>

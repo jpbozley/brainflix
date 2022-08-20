@@ -1,15 +1,18 @@
 import '../../styles/partials/__global.scss'
 import './Upcoming.scss';
+import {useState} from "react";
 
+function Upcoming({videosArray, currentVideo, setCurrentVideo}) {
 
-function Upcoming({videosArray}) {
-
+  const selectVideo=(id)=>{
+    setCurrentVideo(id)
+  }
 
   return (
     <div className="Upcoming">
         <h2 className="Upcoming__title">NEXT VIDEOS</h2>
         {videosArray?.map((video)=>{
-            return <div className="Upcoming__list-item">
+            return <div key={video.id} className={`Upcoming__list-item ${currentVideo.id===video.id ? "Upcoming__display-none" : ""}`} >
             <div className="Upcoming__list-image-container">
                 <img className="Upcoming__list-image" src={video.image} alt="video thumbnail"/>
             </div>

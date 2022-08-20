@@ -3,17 +3,18 @@ import '../../styles/partials/__global.scss'
 import likes from '../../Assets/Icons/likes.svg'
 import views from '../../Assets/Icons/views.svg'
 
-function Video({videosArray}) {
-let convertedDate=new Date(videosArray[0].timestamp);
+function Video({videosArray,currentVideo}) {
+
+  let convertedDate=new Date(currentVideo.timestamp);
 
   return (
     <section className="videos">
       <div className="videos__info">
-        <h1 className="videos__title">{videosArray[0].title}</h1>
+        <h1 className="videos__title">{currentVideo.title}</h1>
         <div className="videos__stats-container">
           <div className="videos__author-date-container">
             <p className="videos__author">
-              By: {videosArray[0].channel}
+              By: {currentVideo.channel}
             </p>
             <p className="videos__date">
               {convertedDate.toLocaleDateString()}
@@ -21,15 +22,15 @@ let convertedDate=new Date(videosArray[0].timestamp);
           </div>
           <div className="videos__views-likes-container">
             <p className="videos__views">
-              <img src={views} alt="views" />{videosArray[0].views}
+              <img src={views} alt="views" />{currentVideo.views}
             </p>
             <p className="videos__likes">
-              <img src={likes} alt="likes" />{videosArray[0].likes}
+              <img src={likes} alt="likes" />{currentVideo.likes}
             </p>
           </div>
         </div>
         <div class="videos__description">
-          <p>{videosArray[0].description}</p>
+          <p>{currentVideo.description}</p>
         </div>
       </div>
     </section>

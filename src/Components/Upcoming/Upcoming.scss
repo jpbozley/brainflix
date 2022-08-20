@@ -3,6 +3,9 @@
 @import "../../styles/partials/_mixins";
 
 .Upcoming{
+    @include desktop{
+        border-left: 1px solid $secondary3;
+    }
 
     &__title{
         color: $primary3;
@@ -22,6 +25,9 @@
             width: 35vw;
         }
           }
+    &__display-none{
+    display: none;
+}
     &__list-image{
         width: 30vw;
         height: 15vw;

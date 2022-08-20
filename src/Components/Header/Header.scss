@@ -2,7 +2,6 @@
 @import "../../styles/partials/__fonts";
 @import "../../styles/partials/_mixins";
 
-
 .Header{
     font-family: Avenir;
     display: flex;
@@ -17,6 +16,26 @@
     &__logo{
         align-self: center;
 
+    }
+    &__searchbox{
+        width: 70vw;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        background-image: url("../../Assets/Icons/search.svg");
+        background-repeat: no-repeat;
+        background-position: left;
+        padding-left: 2rem;
+        outline:none;
+        background-color: $primary4;
+        border: 1px solid $secondary3;
+        &:active,
+        &:focus,
+        &:focus-visible{
+            outline: 1px solid $primary2;
+        }
+        @include tablet{
+            width: 40vw;
+            }
     }
     &__search-div{
         display:flex;
@@ -45,12 +64,6 @@
         @include tablet{
             display: inline;
             align-self: center;
-        }
-    }
-    &__searchbox{
-        width: 70vw;
-        @include tablet{
-            width: 40vw;
         }
     }
     &__button{

@@ -1,6 +1,5 @@
 import './Comments.scss';
 import '../../styles/partials/__global.scss'
-import commentIcon from "../../Assets/Icons/add_comment.svg"
 import profilePic from "../../Assets/Images/Mohan-muruge.jpg"
 
 function Comments({videosArray}) {
@@ -26,7 +25,7 @@ function Comments({videosArray}) {
         <h2 className="Comments__title">Join the conversation</h2>
         <textarea className="Comments__text-area" rows="6" placeholder="Add a new comment"/>
         </div>
-        <button className="Comments__button"><img className="Comments__button-icon" src={commentIcon} alt="comment icon" />COMMENT</button>
+        <button className="Comments__button">COMMENT</button>
     </div>
 </div>
 
