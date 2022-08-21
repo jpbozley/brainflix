@@ -1,4 +1,4 @@
-@import "./styles/partials/__mixins.scss";
+@import "./styles/partials/_mixins.scss";
 
 .App {
   text-align: center;

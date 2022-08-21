@@ -1,5 +1,5 @@
 import './Video.scss';
-import '../../styles/partials/__global.scss'
+import '../../styles/partials/_global.scss'
 import likes from '../../Assets/Icons/likes.svg'
 import views from '../../Assets/Icons/views.svg'
 

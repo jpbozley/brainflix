@@ -1,12 +1,9 @@
 import './Comments.scss';
-import '../../styles/partials/__global.scss'
+import '../../styles/partials/_global.scss'
 import profilePic from "../../Assets/Images/Mohan-muruge.jpg"
 
 function Comments({videosArray, currentVideo}) {
   let displayedVideo=videosArray.find(video=>video.id===currentVideo)
-
-
-  console.log(displayedVideo.comments)
   
   
   return (

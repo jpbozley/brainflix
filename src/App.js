@@ -1,5 +1,5 @@
 import './App.css';
-import './styles/partials/__global.scss'
+import './styles/partials/_global.scss'
 import videosArrayData from './Assets/Data/video-details.json'
 import videosArraySimple from './Assets/Data/videos.json'
 import Header from './Components/Header/Header'
@@ -28,9 +28,10 @@ return (
       currentVideo={currentVideo}/>
       </div>
       <div className="App__upcoming">
-      <Upcoming videosArray={videosArray}
+      <Upcoming
       currentVideo={currentVideo}
-      setCurrentVideo={setCurrentVideo}/>
+      setCurrentVideo={setCurrentVideo}
+      videosArraySimple={videosArraySimple}/>
       </div>
       </div>
     </div>

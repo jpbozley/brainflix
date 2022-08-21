@@ -1,4 +1,4 @@
-import '../../styles/partials/__global.scss'
+import '../../styles/partials/_global.scss'
 import './Hero.scss';
 
 
