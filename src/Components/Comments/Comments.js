@@ -2,18 +2,20 @@ import './Comments.scss';
 import '../../styles/partials/__global.scss'
 import profilePic from "../../Assets/Images/Mohan-muruge.jpg"
 
-function Comments({videosArray}) {
+function Comments({videosArray, currentVideo}) {
+  let displayedVideo=videosArray.find(video=>video.id===currentVideo)
 
-  let mappedComments=videosArray.map((video)=>{
-    return video.comments
-  })
+
+  console.log(displayedVideo.comments)
+  
+  
   return (
 <section className="comments">
 
 
 {/* # of Comments */}
 
-<h1 className="Comments__count">3 Comments</h1>
+<h1 className="Comments__count">{displayedVideo.comments.length} Comments</h1>
 
 {/* Profile pic, join the conversation, textbox */}
 <div className="Comments__container">
@@ -32,7 +34,7 @@ function Comments({videosArray}) {
 {/* displayed comments */}
 <div className="Comments__display">
   </div>
-    {mappedComments[0].map((array)=>{
+    {displayedVideo.comments.map((array)=>{
       let convertedDate=new Date(array.timestamp);
       return (
     <div className="Comments__container">

@@ -1,6 +1,7 @@
 import './App.css';
 import './styles/partials/__global.scss'
 import videosArrayData from './Assets/Data/video-details.json'
+import videosArraySimple from './Assets/Data/videos.json'
 import Header from './Components/Header/Header'
 import Video from './Components/Video/Video'
 import Comments from './Components/Comments/Comments'
@@ -12,7 +13,7 @@ import {useState} from 'react'
 
 function App() {
   const [videosArray, setVideosArray]=useState(videosArrayData);
-  const [currentVideo, setCurrentVideo]=useState(videosArrayData[0]);
+  const [currentVideo, setCurrentVideo]=useState(videosArrayData[0].id);
 
 return (
     <div className="App">
@@ -23,7 +24,8 @@ return (
       <div className="App__videos-comments">
       <Video videosArray={videosArray}
       currentVideo={currentVideo}/>
-      <Comments videosArray={videosArray}/>
+      <Comments videosArray={videosArray}
+      currentVideo={currentVideo}/>
       </div>
       <div className="App__upcoming">
       <Upcoming videosArray={videosArray}
