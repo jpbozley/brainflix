@@ -8,12 +8,9 @@
     }
 
     &__title{
+        @include avenir-styling;
         color: $primary3;
         margin: 0;
-        font-family: Avenir;
-        font-size: .75rem;
-        text-align: left;
-        font-weight: 400;
         padding-left: 1rem;
         padding-top: .5rem;
     }
@@ -40,14 +37,15 @@
         }
     &__list-item-info{
         width: 60vw;
-        font-size: .5rem;
+        font-family: "Avenir";
+        font-size: .75rem;
         display: flex;
         flex-direction: column;
         text-align: left;
         padding-left: .5rem;
         }
     &__list-item-channel{
-        font-family: Avenir;
+        font-family: "Avenir";
         font-weight: 400;
         margin: 0;    }
 

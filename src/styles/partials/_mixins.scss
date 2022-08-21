@@ -7,3 +7,25 @@
         @content;
     }
 }
+
+@mixin button-styling{
+    background-color: $primary2;
+    color: $primary4;
+    border: none;
+    border-radius: 4px;
+    font-family: "Avenir";
+    font-weight: 700;
+}
+
+@mixin button-icon-styling{
+    position: absolute;
+    left: 1rem;
+    bottom:.25rem;    
+}
+
+@mixin avenir-styling {
+    font-family: "Avenir";
+    font-size: .75rem;
+    text-align: left;
+    font-weight: 400;
+}

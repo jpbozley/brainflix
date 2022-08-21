@@ -8,7 +8,7 @@
         padding-left: 1rem;
         padding-right: 1rem;
         flex-direction: column;
-        font-family: avenir;
+        font-family: "Avenir";
         @include desktop{
             margin-left: auto;
             width: 50vw;
@@ -16,7 +16,7 @@
 
     }
     &__title{
-        font-family: Avenir;
+        font-family: "Avenir";
         font-weight: 700;
         text-align: left;
         font-size: 1.5rem;
@@ -76,10 +76,8 @@
         color:$primary3;
     }
     &__description{
-        text-align: left;
-        font-family: avenir;
-        font-size: .75rem;
+        @include avenir-styling;
         line-height: 1.1rem;
-        font-weight: 400;
+
     }
 }
