@@ -1,0 +1,8 @@
+@import "../../styles/partials/_colors";
+@import "../../styles/partials/_fonts";
+@import "../../styles/partials/_mixins";
+
+.Uploads{
+    display: flex;
+    flex-direction: row;
+}
