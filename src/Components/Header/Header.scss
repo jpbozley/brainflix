@@ -11,7 +11,11 @@
         flex-direction: row;
     }
     @include desktop{
+        padding-left: 6rem;
+        padding-right: 6rem;
         justify-content: space-between;
+        border-bottom: 1px solid $secondary3;
+
     }
     &__logo{
         align-self: center;
@@ -36,6 +40,16 @@
         @include tablet{
             width: 40vw;
             }
+        @include desktop{
+            width: 20vw;
+        }
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        @include tablet{
+            flex-direction: row;
+        }
     }
     &__search-div{
         display:flex;
@@ -46,12 +60,16 @@
             padding-left: 4rem;
             padding-right: 1rem;
         }
+        @include desktop{
+            align-self:right;
+        }
     }
 
     &__profile-pic{
         width: 2rem;
         height: 2rem;
         border-radius:50%;
+        margin-left:.5rem;
         @include tablet{
             display: none;
         }
@@ -77,6 +95,12 @@
             width: 20vw;
             margin-right: 1rem;
         }
+        @include desktop{
+            width: 15vw;
+        }
+    }
+    &__button-link{
+        align-self: center;
     }
     &__button:hover{
         background-color: $secondary2;

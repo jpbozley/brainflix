@@ -1,0 +1,16 @@
+@import "../../styles/partials/_colors";
+@import "../../styles/partials/_fonts";
+@import "../../styles/partials/_mixins";
+
+
+.Confirmation{
+    &__button{
+        @include button-styling;
+        align-self:center;
+        width: 80vw;
+        position: relative;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+    
+}

@@ -15,29 +15,7 @@
   height: 40vmin;
   pointer-events: none;
 }
-.App__info-container{
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    justify-content: space-between;
 }
-.App__videos-comments{
-  width:50vw;
-  margin-left: auto;
-}
-.App__upcoming{
-  width: 35vw;
-  margin-right:auto;
-}
-.App__info{
-    display: flex;
-    flex-direction: column;
-}
-}
-
-
-
-
 
 
 

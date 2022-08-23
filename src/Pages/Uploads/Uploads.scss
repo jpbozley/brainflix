@@ -1,0 +1,116 @@
+@import "../../styles/partials/_colors";
+@import "../../styles/partials/_fonts";
+@import "../../styles/partials/_mixins";
+
+
+.Uploads{
+    font-family: 'Avenir';
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @include desktop{
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+    &__body{
+            display: flex;
+            flex-direction: column;
+        @include desktop{
+            flex-direction: row;
+        }
+    }
+    &__title{
+        border-top: 1px solid $secondary3;
+        text-align: left;
+        font-weight: bold;
+        @include tablet{
+            border-top: 0;
+            border-bottom: 1px solid $secondary3;
+            padding-bottom: 1.5rem;
+        }
+    }
+    &__container{
+        @include tablet{
+            width: 50vw;
+        }
+        @include desktop{
+            width: 30vw;
+        }
+    }
+    &__form-container{
+        @include desktop{
+            width: 65vw;
+            margin-left: 2rem;
+        }
+    }
+    &__thumbnail{
+        width:100%;
+    }
+    &__thumbnail-text{
+        text-align: left;
+        color: $primary3;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    &__button-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        @include tablet{
+            flex-direction: row-reverse;
+            border-top: 1px solid $secondary3;
+            margin-top: 1rem;
+        }
+    }
+    &__button-publish{
+        @include button-styling;
+        align-self:center;
+        position: relative;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        margin-top: 1rem;
+        width: 80vw;
+        background-image: url('../../Assets/Icons/publish.svg');
+        background-repeat: no-repeat;
+        background-position: bottom 8px left 10px;
+        @include tablet{
+            width: 15vw;
+        }
+    }
+    &__button-cancel{
+        align-self:center;
+        position: relative;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        background-color: $secondary4;
+        border: none;
+        color: $primary2;
+        font-weight: bold;
+        margin-bottom: .5rem;
+        width: 80vw;
+        @include tablet{
+            width: 15vw;
+            margin-top:1rem;
+            margin-bottom:0;
+        }
+    }
+    &__form{
+        text-align:left;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    &__form-label{
+        color: $primary3;
+        font-size: .75rem;
+        font-weight: 700;
+    }
+    &__form-input{
+        background-color: $secondary4;
+        width: 100%;
+        border: 1px solid $primary3;
+        font-family: 'Avenir';
+        line-height: 2rem;
+    }
+}
