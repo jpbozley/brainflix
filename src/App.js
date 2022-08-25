@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Uploads from './Pages/Uploads/Uploads'
 import Confirmation from './Pages/Confirmation/Confirmation';
-
+import Video from './Components/Video/Video';
 function App() {
 
   

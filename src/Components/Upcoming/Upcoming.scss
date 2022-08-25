@@ -6,7 +6,9 @@
     @include desktop{
         border-left: 1px solid $secondary3;
     }
-
+    &__link{
+        text-decoration: none;
+    }
     &__title{
         @include avenir-styling;
         color: $primary3;

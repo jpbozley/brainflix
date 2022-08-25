@@ -9,7 +9,7 @@ import { useParams } from 'react-router-dom';
 
 function Video({videosArray,currentVideo, currentVideoId, videosArraySimple,url}) {
 
-  console.log(currentVideo)
+
   // let displayedVideo=videosArray.find(video=>video.id===currentVideo.id)
   if(currentVideo===null){return <h1>waiting...</h1>}
 
