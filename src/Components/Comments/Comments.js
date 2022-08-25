@@ -3,16 +3,18 @@ import '../../styles/partials/_global.scss'
 import profilePic from "../../Assets/Images/Mohan-muruge.jpg"
 
 function Comments({videosArray, currentVideo}) {
-  let displayedVideo=videosArray.find(video=>video.id===currentVideo)
-  
-  
+
+
+  // let displayedVideo=videosArray.find(video=>video.id===currentVideo)
+  if(currentVideo.comments===null||videosArray===null){console.log("waiting");return <h1>waiting...</h1>}
+
   return (
 <section className="comments">
 
 
 {/* # of Comments */}
 
-<h1 className="Comments__count">{displayedVideo.comments.length} Comments</h1>
+{/* <h1 className="Comments__count">{currentVideo.comments.length} Comments</h1> */}
 
 {/* Profile pic, join the conversation, textbox */}
 <div className="Comments__container">
@@ -31,7 +33,7 @@ function Comments({videosArray, currentVideo}) {
 {/* displayed comments */}
 <div className="Comments__display">
   </div>
-    {displayedVideo.comments.map((array)=>{
+    {currentVideo.comments?.map((array)=>{
       let convertedDate=new Date(array.timestamp);
       return (
     <div className="Comments__container">

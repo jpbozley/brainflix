@@ -1,19 +1,19 @@
 import '../../styles/partials/_global.scss'
 import './Upcoming.scss';
 
-function Upcoming({currentVideo, setCurrentVideo, videosArraySimple}) {
+function Upcoming({currentVideo, setCurrentVideo, videosArraySimple,setCurrentVideoId}) {
 
-  const selectVideo=(id)=>{
-    setCurrentVideo(id)
+  const selectVideo=(obj)=>{
+    setCurrentVideo(obj)
   }
-
-  console.log(videosArraySimple[0].id)
 
   return (
     <div className="Upcoming">
         <h2 className="Upcoming__title">NEXT VIDEOS</h2>
         {videosArraySimple?.map((video)=>{
-            return <div key={video.id} onClick={()=>selectVideo(video.id)} className={`Upcoming__list-item ${currentVideo===video.id ? "Upcoming__display-none" : ""}`} >
+            return <div key={video.id}
+            onClick={()=>selectVideo(video)} 
+            className={`Upcoming__list-item ${currentVideo===video.id ? "Upcoming__display-none" : ""}`} >
             <div className="Upcoming__list-image-container">
                 <img className="Upcoming__list-image" src={video.image} alt="video thumbnail"/>
             </div>
