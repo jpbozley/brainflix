@@ -1,7 +1,7 @@
 import '../../styles/partials/_global.scss'
 import './Upcoming.scss';
 import { Link } from 'react-router-dom';
-function Upcoming({ currentVideo, setCurrentVideo, videosArraySimple, currentVideoId }) {
+function Upcoming({ videosArraySimple, currentVideoId }) {
 
 
   return (

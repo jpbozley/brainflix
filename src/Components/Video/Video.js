@@ -7,14 +7,13 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 
-function Video({videosArray,currentVideo, currentVideoId, videosArraySimple,url}) {
+function Video({ currentVideo }) {
 
 
-  // let displayedVideo=videosArray.find(video=>video.id===currentVideo.id)
-  if(currentVideo===null){return <h1>waiting...</h1>}
+  if (currentVideo === null) { return <h1>waiting...</h1> }
 
 
-  let convertedDate=new Date(currentVideo.timestamp);
+  let convertedDate = new Date(currentVideo.timestamp);
   return (
     <section className="videos">
       <div className="videos__info">
