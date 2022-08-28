@@ -1,7 +1,6 @@
 import '../../styles/partials/_global.scss'
 import thumbnail from '../../Assets/Images/Upload-video-preview.jpg'
 import './Uploads.scss';
-import Confirmation from '../Confirmation/Confirmation';
 import { Link } from 'react-router-dom';
 
 function Uploads() {

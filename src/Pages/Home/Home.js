@@ -4,7 +4,6 @@ import Video from '../../Components/Video/Video'
 import Comments from '../../Components/Comments/Comments'
 import Upcoming from '../../Components/Upcoming/Upcoming'
 import Hero from '../../Components/Hero/Hero'
-// import videosArrayData from '../../Assets/Data/video-details.json'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
@@ -19,20 +18,10 @@ function Home() {
   let url = `https://project-2-api.herokuapp.com/videos/${currentVideoId}?api_key=0e3d748e-46f2-466e-b6b2-8f65f5a19bec`;
 
 
-  //2 states: 1 for the big list of videos
-  //when videoArraySimple changes, it changes currentVideo
 
-
-
-
-
-
-  // console.log(params)
 
 
   let params = useParams();
-  console.log(params.id)
-  // how to use params to change setCurrentVideoId?
   useEffect(() => {
     if (currentVideoId !== params) {
       setCurrentVideoId(params.id)

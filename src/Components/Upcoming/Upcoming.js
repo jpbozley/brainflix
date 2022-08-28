@@ -3,9 +3,6 @@ import './Upcoming.scss';
 import { Link } from 'react-router-dom';
 function Upcoming({ currentVideo, setCurrentVideo, videosArraySimple, currentVideoId }) {
 
-  // const selectVideo = (obj) => {
-  //   setCurrentVideo(obj)
-  // }
 
   return (
     <div className="Upcoming">
