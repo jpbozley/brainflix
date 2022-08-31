@@ -5,7 +5,6 @@ import profilePic from "../../Assets/Images/Mohan-muruge.jpg"
 function Comments({ videosArray, currentVideo }) {
 
 
-  // let displayedVideo=videosArray.find(video=>video.id===currentVideo)
   if (currentVideo.comments === null || videosArray === null) { console.log("waiting"); return <h1>waiting...</h1> }
 
   return (

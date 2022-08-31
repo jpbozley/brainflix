@@ -15,9 +15,11 @@ function Home() {
   const [videosArraySimple, setVideosArraySimple] = useState([])
   const [currentVideoId, setCurrentVideoId] = useState("84e96018-4022-434e-80bf-000ce4cd12b8");
 
-  let url = `https://project-2-api.herokuapp.com/videos/${currentVideoId}?api_key=0e3d748e-46f2-466e-b6b2-8f65f5a19bec`;
+  // let url = `https://project-2-api.herokuapp.com/videos/${currentVideoId}?api_key=0e3d748e-46f2-466e-b6b2-8f65f5a19bec`;
 
 
+
+  let url = `http://localhost:8080/videos/${currentVideoId}`
 
 
 
@@ -43,7 +45,7 @@ function Home() {
   //This is the simple array
   useEffect(() => {
     axios
-      .get("https://project-2-api.herokuapp.com/videos/?api_key=0e3d748e-46f2-466e-b6b2-8f65f5a19bec")
+      .get("http://localhost:8080/videos")
       .then((response) => {
         setVideosArraySimple(response.data)
         setCurrentVideoId(null || response.data[0].id)
