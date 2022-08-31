@@ -10,20 +10,15 @@ import { useNavigate } from 'react-router-dom';
 function Uploads() {
 
 
-  //start new add
   const formRef = useRef();
   const navigate = useNavigate();
-  const addVideo = (e) => {
-    e.preventDefault();
 
-    axios.post("http://localhost:8080/videos/",
-      { title: "Test" }
-    )
-  };
-
-  //end new add
-  const submitHandler = () => {
-    axios.post("http://localhost:8080/videos/");
+  const submitHandler = (event) => {
+    event.preventDefault();
+    axios.post("http://localhost:8080/videos/", {
+      description: formRef.current.description.value,
+      title: formRef.current.title.value
+    });
     navigate('/confirmation')
   }
   return (
@@ -38,21 +33,19 @@ function Uploads() {
 
           {/* change the onsubmit */}
 
-          <form onSubmit={submitHandler} className="Uploads__form">
+          <form onSubmit={submitHandler} ref={formRef} className="Uploads__form">
             <div>
               <label className="Uploads__form-label">TITLE YOUR VIDEO
-                <input className="Uploads__form-input" id="title" type="text" placeholder='Add a title to your video' />
+                <input className="Uploads__form-input" id="title" name="title" type="text" placeholder='Add a title to your video' />
               </label>
             </div>
             <div>
               <label className="Uploads__form-label">ADD A VIDEO DESCRIPTION
-                <textarea className="Uploads__form-input" id="description" placeholder='Add a description to your video' rows='5' />
+                <textarea className="Uploads__form-input" name="description" id="description" placeholder='Add a description to your video' rows='5' />
               </label>
             </div>
             <div className="Uploads__button-container">
-              {/* <Link to='/confirmation' className="Uploads__button-link"> */}
               <button type="submit" className="Uploads__button-publish">PUBLISH</button>
-              {/* </Link> */}
               <Link to='/'><button className="Uploads__button-cancel">CANCEL</button></Link>
             </div>
           </form>
@@ -61,5 +54,6 @@ function Uploads() {
     </div>
   );
 }
+
 
 export default Uploads;
