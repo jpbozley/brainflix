@@ -1,10 +1,9 @@
 import '../../styles/partials/_global.scss'
-import thumbnail from '../../Assets/Images/Upload-video-preview.jpg'
 import './Uploads.scss';
+import thumbnail from '../../Assets/Images/Upload-video-preview.jpg'
 import { useRef } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 function Uploads() {
@@ -30,8 +29,6 @@ function Uploads() {
           <img className="Uploads__thumbnail" src={thumbnail} alt="bike-thumbnail" />
         </div>
         <div className="Uploads__form-container">
-
-          {/* change the onsubmit */}
 
           <form onSubmit={submitHandler} ref={formRef} className="Uploads__form">
             <div>

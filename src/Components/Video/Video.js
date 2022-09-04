@@ -2,9 +2,6 @@ import './Video.scss';
 import '../../styles/partials/_global.scss'
 import likes from '../../Assets/Icons/likes.svg'
 import views from '../../Assets/Icons/views.svg'
-import axios from 'axios'
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 
 
 function Video({ currentVideo }) {

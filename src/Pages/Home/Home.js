@@ -15,7 +15,6 @@ function Home() {
   const [videosArraySimple, setVideosArraySimple] = useState([])
   const [currentVideoId, setCurrentVideoId] = useState("84e96018-4022-434e-80bf-000ce4cd12b8");
 
-  // let url = `https://project-2-api.herokuapp.com/videos/${currentVideoId}?api_key=0e3d748e-46f2-466e-b6b2-8f65f5a19bec`;
 
 
 
@@ -30,19 +29,22 @@ function Home() {
       axios
         .get(url)
         .then((response) => setCurrentVideo(response.data))
+        .catch((error) => { console.log(error) })
     }
   }, [params])
 
-  //This is the cornerstone of sprint2
+  //gets data from the larger array
   useEffect(() => {
     axios
       .get(url)
       .then((response) => {
         setCurrentVideo(response.data)
       })
+      .catch((error) => { console.log(error) })
   }, [currentVideoId])
 
-  //This is the simple array
+
+  //sets the shorter array
   useEffect(() => {
     axios
       .get("http://localhost:8080/videos")
@@ -50,7 +52,7 @@ function Home() {
         setVideosArraySimple(response.data)
         setCurrentVideoId(null || response.data[0].id)
       })
-      .catch(error => console.log(error));
+      .catch((error) => { console.log(error) })
   }, [])
 
 
