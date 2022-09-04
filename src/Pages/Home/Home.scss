@@ -1,4 +1,6 @@
 @import "../../styles/partials/_mixins.scss";
+@import "../../styles/partials/_colors.scss";
+@import "../../styles/partials/_fonts.scss";
 
 .Home {
   text-align: center;
@@ -6,31 +8,36 @@
 }
 
 
-@media(min-width: 1280px){
-  .Home{
-  display: flex;
-  flex-direction: column;
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-.Home__info-container{
+@media(min-width: 1280px) {
+  .Home {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+
+  .Home__info-container {
     display: flex;
     flex-direction: row;
     width: 100vw;
     justify-content: space-between;
-}
-.Home__videos-comments{
-  width:50vw;
-  margin-left: auto;
-}
-.Home__upcoming{
-  width: 35vw;
-  margin-right:auto;
-}
-.Home__info{
+  }
+
+  .Home__videos-comments {
+    width: 50vw;
+    margin-left: auto;
+  }
+
+  .Home__upcoming {
+    width: 35vw;
+    margin-right: auto;
+  }
+
+  .Home__info {
     display: flex;
     flex-direction: column;
-}
+  }
 }

@@ -21,7 +21,7 @@ function Home() {
   let url = `http://localhost:8080/videos/${currentVideoId}`
 
 
-
+  // sets displayed video based on chosen video's ID
   let params = useParams();
   useEffect(() => {
     if (currentVideoId !== params) {

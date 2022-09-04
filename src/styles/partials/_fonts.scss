@@ -2,10 +2,11 @@
     font-family: "Avenir";
     font-weight: 400;
     src: url("../../Assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"),
+        url("../../Assets/Font/Alternative_files/AvenirNextLTPro.ttf") format("truetype")
 }
 
 @font-face {
     font-family: "Avenir";
     font-weight: 700;
-    src: url("../../Assets/Font/AvenirNextLTPro-Bold.otf")
+    src: url("../../Assets/Font/AvenirNextLTPro-Bold.otf") url("../../Assets/Font/Alternative_files/AvenirNextLTProBold.ttf")
 }

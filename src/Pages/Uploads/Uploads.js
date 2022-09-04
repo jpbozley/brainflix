@@ -12,6 +12,8 @@ function Uploads() {
   const formRef = useRef();
   const navigate = useNavigate();
 
+
+  // grabs data from upload form and sets it into new video's upload
   const submitHandler = (event) => {
     event.preventDefault();
     axios.post("http://localhost:8080/videos/", {
@@ -29,7 +31,7 @@ function Uploads() {
           <img className="Uploads__thumbnail" src={thumbnail} alt="bike-thumbnail" />
         </div>
         <div className="Uploads__form-container">
-
+          {/* submit form */}
           <form onSubmit={submitHandler} ref={formRef} className="Uploads__form">
             <div>
               <label className="Uploads__form-label">TITLE YOUR VIDEO
